@@ -1,7 +1,7 @@
 import React from 'react'
 import {Switch, Route,Redirect} from 'react-router-dom'
 
-import Profile from './Profile'
+/* import Profile from './Profile'
 import Dashboard from './administration/dashboard/main'
 
 import Addcontractor from './administration/contractor/Addcontractor'
@@ -31,7 +31,39 @@ import NewUserPwd from './NewUserPwd'
 import Pending from './administration/billing/Status/Pending'
 import Completed from './administration/billing/Status/Completed'
 import Cancelled from './administration/billing/Status/Cancelled'
-import AllQ from './administration/billing/Status/AllQ'
+import AllQ from './administration/billing/Status/AllQ' */
+
+const Profile = React.lazy(() => import("./Profile.js"));
+const Dashboard = React.lazy(() => import("./administration/dashboard/main.js"));
+const Addcontractor = React.lazy(() => import("./administration/contractor/Addcontractor.js"));
+const AddUser = React.lazy(() => import("./administration/user/AddUser.js"));
+const AddClient = React.lazy(() => import("./administration/client/AddClient.js"));
+const Contractorlist = React.lazy(() => import("./administration/contractor/Contractorlist.js"));
+const UserList = React.lazy(() => import("./administration/user/UserList.js"));
+const ClientList = React.lazy(() => import("./administration/client/ClientList.js"));
+const AddInvoice = React.lazy(() => import("./administration/billing/AddInvoice.js"));
+const QuotationList = React.lazy(() => import("./administration/billing/QuotationList.js"));
+
+const Login = React.lazy(() => import("./auth/Login.js"));
+const Logout = React.lazy(() => import("./auth/Logout.js"));
+const AddCountry = React.lazy(() => import("./AddCountry.js"));
+const NavBar = React.lazy(() => import("./NavBar.js"));
+
+const LandingPage = React.lazy(() => import("./administration/landingPage/LandingPage.js"));
+const ForgotPassword = React.lazy(() => import("./auth/Forgotpassword.js"));
+const AddQuotation = React.lazy(() => import("./administration/billing/AddQuotation.js"));
+const EditQuotation = React.lazy(() => import("./administration/billing/EditQuotation.js"));
+const TrashQuote = React.lazy(() => import("./administration/billing/TrashQuote.js"));
+
+const PasswordReset = React.lazy(() => import("./ForgotPassword.js"));
+const DummyNav = React.lazy(() => import("./DummyNav.js"));
+const UserForgotpwd = React.lazy(() => import("./UserForgotpwd.js"));
+const NewUserPwd = React.lazy(() => import("./NewUserPwd.js"));
+const Pending = React.lazy(() => import("./administration/billing/Status/Pending.js"));
+const Completed = React.lazy(() => import("./administration/billing/Status/Completed.js"));
+const Cancelled = React.lazy(() => import("./administration/billing/Status/Cancelled.js"));
+const AllQ = React.lazy(() => import("./administration/billing/Status/AllQ.js"));
+
 // import AddInvClient from './administration/billing/AddInvoiceClient';
 // import AddInvContractor from './administration/billing/AddInvContractor';
 // import ClientPayment from './administration/billing/ClientPayments'
